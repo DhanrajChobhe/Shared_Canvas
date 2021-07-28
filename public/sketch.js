@@ -6,10 +6,10 @@ window.addEventListener("load", () => {
   const canvas = document.getElementById("mycan");
   let ctx = canvas.getContext("2d");
 
-  //resizing
+
   canvas.height = window.innerHeight;
   canvas.width = window.innerWidth;
-  //variables
+
   let painting = false;
 
   function startPosition(e) {
@@ -51,7 +51,6 @@ window.addEventListener("load", () => {
     socket.emit("mouse", data);
   }
 
-  //eventListeners
   canvas.addEventListener("mousedown", startPosition);
   canvas.addEventListener("mouseup", endPosition);
   canvas.addEventListener("mousemove", draw);
